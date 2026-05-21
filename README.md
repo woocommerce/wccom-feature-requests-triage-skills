@@ -89,6 +89,15 @@ When you run `/triage-woo-feature-requests` with a product URL or ID, here is wh
 - **WooCommerce REST API keys** with Read/Write permissions for the product you want to triage
 - **Python 3**
 
+### 0. Clone this repository
+
+In the terminal, run:
+
+```
+git clone https://github.com/woocommerce/wccom-feature-requests-triage-skills.git
+cd wccom-feature-requests-triage-skills
+```
+
 ### 1. Generate API keys
 
 **WooCommerce → Settings → Advanced → REST API → Add Key**
@@ -115,7 +124,16 @@ Replace `ck_xxxx:cs_xxxx` with the keys from step 1 in the format `consumer_key:
 
 Restart Claude Code (or reload the MCP servers) so it picks up the new server configuration.
 
-### 4. Run the orchestrator
+### 4. (Optional): Set up Python dependencies for in-depth duplicate requests detection
+
+In the terminal, run:
+
+```
+python3 -m venv .venv
+.venv/bin/pip install scikit-learn scipy sentence-transformers
+```
+
+### 5. Run the orchestrator
 
 In Claude Code, type:
 
