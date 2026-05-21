@@ -1,0 +1,8 @@
+evals/
+.DS_Store
+test-checklist.md
+.claude/settings.json
+.claude/settings.local.json
+.claude/skills/*-workspace/
+.claude/worktrees/
+.triage-state/
